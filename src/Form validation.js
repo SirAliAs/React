@@ -65,8 +65,8 @@ export default class Form extends Component {
   render() {
     return (
       <div className='bg-green-500 h-screen'>
-        <form action="#" onSubmit={this.submitHandler} className='flex flex-col items-center pt-7'>
-            <div className='flex flex-col bg-white shadow-2xl h-full'>
+        <form action="#" onSubmit={this.submitHandler} className='flex flex-col items-center pt-5'>
+            <div className='flex flex-col bg-white shadow-2xl h-full rounded'>
                 {this.state.submitted && this.state.allValid && (
                     <div className='p-2 mt-5 mx-3 bg-blue-400 rounded'>
                     Success! Thank you for registering.
