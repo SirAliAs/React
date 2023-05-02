@@ -5,13 +5,20 @@ import Notification from "./Notification count Project";
 import Form from "./Form validation";
 import FormRef from "./Form Val Refactor";
 import Users from "./Users";
+import routes from "./Routes/Routes";
+import { useRoutes } from "react-router-dom";
 
-function App() {
+
+
+export default function App() {
   const allPrducts = [
     { id: 1, title: "Asus", image: "Asus.jpg", price: "220", Children },
     { id: 2, title: "HP", image: "Hp.jpg", price: "180", Children },
     { id: 3, title: "Mac", image: "Mac.jpg", price: "420", Children },
   ];
+
+
+  let router = useRoutes(routes)
   return (
     // -------------> Product Card Project <-------------
     // -------------> Start <--------------
@@ -89,11 +96,15 @@ function App() {
     // ---------------> GET Users From API <---------------
     // ---------------> Start <---------------
 
-    <div>
-      <Users />
-    </div>
-  );
-}
+    // <div>
+    //   <Users />
+    // </div>
+//   );
+// }
 // ---------------> End <---------------
-/////////////////////////////////////////////////////////////////////////////////
-export default App;
+
+<div>
+  {router}
+</div>
+);
+}
